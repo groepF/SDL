@@ -1,4 +1,4 @@
-/*
+﻿/*
 * Copyright (c) 2006-2007 Erin Catto http://www.box2d.org
 *
 * This software is provided 'as-is', without any express or implied
@@ -25,7 +25,7 @@
 // box.
 // There are no graphics for this example. Box2D is meant to be used
 // with your rendering engine in your game engine.
-int main(int argc, char** argv)
+/*int main(int argc, char** argv)
 {
 	B2_NOT_USED(argc);
 	B2_NOT_USED(argv);
@@ -102,4 +102,4 @@ int main(int argc, char** argv)
 	// create orphaned pointers, so be careful about your world management.
 
 	return 0;
-}
+}*/

@@ -1,6 +1,6 @@
 #include "Game.h"
-
-
+#include <Box2D/Box2D.h>
+#include <string>
 
 Game::Game()
 {
@@ -8,6 +8,10 @@ Game::Game()
 	gameState = GameState::PLAY;
 	width = 1024;
 	height = 768;
+
+	b2Vec2 gravity = b2Vec2(0, -9.8);
+
+	world = new b2World(gravity);
 }
 
 
@@ -33,6 +37,11 @@ void Game::initialize()
 		height,
 		SDL_WINDOW_OPENGL
 	);
+	
+	SDL_SetWindowTitle(window, "Super Game - Deluxe");
+	renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
+	SDL_SetRenderDrawColor(renderer, 0xFF, 0xFF, 0xFF, 0xFF);
+
 }
 
 void Game::loop()

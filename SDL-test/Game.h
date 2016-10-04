@@ -2,6 +2,7 @@
 
 #include <SDL/SDL.h>
 #include <GL/glew.h>
+#include <Box2D/Box2D.h>
 
 enum class GameState {PLAY, EXIT};
 
@@ -20,5 +21,7 @@ private:
 	SDL_Window* window;
 	int width, height;
 	GameState gameState;
+	SDL_Renderer* renderer;
+	b2World *world;
 };
 
