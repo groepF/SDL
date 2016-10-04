@@ -2,7 +2,9 @@
 
 #include <SDL/SDL.h>
 #include <GL/glew.h>
-#include <Box2D/Box2D.h>
+
+#include "Sprite.h"
+
 
 enum class GameState {PLAY, EXIT};
 
@@ -16,12 +18,13 @@ public:
 	void initialize();
 	void loop();
 	void tick();
+	void render();
 
 private:
 	SDL_Window* window;
-	int width, height;
 	GameState gameState;
-	SDL_Renderer* renderer;
-	b2World *world;
+	int width, height;
+
+	Sprite mSprite;
 };
 
